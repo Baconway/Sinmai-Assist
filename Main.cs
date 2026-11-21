@@ -19,9 +19,9 @@ namespace SinmaiAssist
 {
     public static partial class BuildInfo
     {
-        public const string Name = "Sinmai-Assist";
+        public const string Name = "Sinmai-Assist (Bway mods)";
         public const string Description = "SlimMod Melon Version For Sinmai";
-        public const string Author = "WYH2004 (Slim) & Error063";
+        public const string Author = "WYH2004 (Slim) & Error063 (Baconway mods)";
         public const string Company = "Wahleak Technology()";
         public const string Version = "1.0.0";
         public const string DownloadLink = null;
@@ -125,7 +125,7 @@ namespace SinmaiAssist
             {
                 if (GameID.Equals("SDGB"))
                 {
-                    Patch(typeof(DummyChimeLogin));
+                    //Patch(typeof(DummyChimeLogin));
                 }
                 else
                 {

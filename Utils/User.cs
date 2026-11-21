@@ -89,10 +89,10 @@ public class User
     public static string GetFavoriteList(UserData userData)
     {
         string list = "[{";
-        list += "\"iconList\": [" + string.Join(", ", userData.IconList.Select(item => item.itemId)) + "]";
-        list += ",\"plateList\": [" + string.Join(", ", userData.PlateList.Select(item => item.itemId)) + "]";
-        list += ",\"titleList\": [" + string.Join(", ", userData.TitleList.Select(item => item.itemId)) + "]";
-        list += ",\"frameList\": [" + string.Join(", ", userData.FrameList.Select(item => item.itemId)) + "]";
+        list += "\"iconList\": [" + string.Join(", ", userData.IconList.Where(item => item.stock > 0).Select(item => item.itemId)) + "]";
+        list += ",\"plateList\": [" + string.Join(", ", userData.PlateList.Where(item => item.stock > 0).Select(item => item.itemId)) + "]";
+        list += ",\"titleList\": [" + string.Join(", ", userData.TitleList.Where(item => item.stock > 0).Select(item => item.itemId)) + "]";
+        list += ",\"frameList\": [" + string.Join(", ", userData.FrameList.Where(item => item.stock > 0).Select(item => item.itemId)) + "]";
         list += "}]";
         return list;
     }

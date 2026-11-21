@@ -1,5 +1,8 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using MelonLoader;
+
+[assembly: InternalsVisibleTo("Sinmai-Assist.Tests")]
 
 [assembly: AssemblyTitle(SinmaiAssist.BuildInfo.Description)]
 [assembly: AssemblyDescription(SinmaiAssist.BuildInfo.Description)]

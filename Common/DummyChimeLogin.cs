@@ -1,4 +1,4 @@
-﻿using ChimeLib.NET;
+﻿/*using ChimeLib.NET;
 using HarmonyLib;
 using Manager;
 using System.Collections;
@@ -183,4 +183,4 @@ public class DummyChimeLogin
     {
         DummyLoginPanel.UserIdLoginFlag = false;
     }
-}
+}*/

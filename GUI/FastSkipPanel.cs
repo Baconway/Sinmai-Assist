@@ -12,6 +12,7 @@ public class FastSkipPanel
         FastSkip.SkipButton = false;
         GUILayout.Label($"Skip Mode: {(FastSkip.CustomSkip ? "Custom" : "Default")}", MainGUI.Style.Text);
         if (GUILayout.Button("Skip", new GUIStyle(MainGUI.Style.Button){ fontSize=20 }, GUILayout.Height(45f))) FastSkip.SkipButton = true;
+        FastSkip.AutoSkip = GUILayout.Toggle(FastSkip.AutoSkip, "Auto Skip");
         GUILayout.Label($"Mode Setting", MainGUI.Style.Title);
         if (GUILayout.Button("Default", MainGUI.Style.Button)) FastSkip.CustomSkip = false;
         if (GUILayout.Button("Custom", MainGUI.Style.Button)) FastSkip.CustomSkip = true;
@@ -39,6 +40,7 @@ public class FastSkipPanel
                 GUILayout.Label("Error: Please enter a valid int value.", MainGUI.Style.ErrorMessage);
             }
             FastSkip.Force1Miss = GUILayout.Toggle(FastSkip.Force1Miss, "Force Add 1 miss");
+
         }
     }
 }

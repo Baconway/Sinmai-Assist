@@ -23,6 +23,7 @@ internal class FastSkip
     public static bool CustomSkip = false;
     public static bool SkipButton = false;
     public static bool Force1Miss = false;
+    public static bool AutoSkip = false;
     public static int CustomAchivement = 0;
     
     private static bool _isSkip = false;
@@ -52,7 +53,7 @@ internal class FastSkip
             if (_sequence >= GameSequence.Play && _sequence < GameSequence.Release && !GameManager.IsNoteCheckMode)
             {
                 _isSkip = false;
-                if (DebugInput.GetKeyDown(KeyCode.Space) || SkipButton)
+                if (DebugInput.GetKeyDown(KeyCode.Space) || SkipButton || AutoSkip)
                 {
                     _isSkip = true;
                     GameMonitor[] monitors = (GameMonitor[])typeof(GameProcess).GetField("_monitors", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(__instance);

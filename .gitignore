@@ -376,3 +376,9 @@ Output
 /PostBuild.bat
 /Libs
 /.run
+
+AGENT.md
+
+# Test files and test projects
+/Tests/
+*Tests.cs
